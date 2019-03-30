@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    tools:context=".MainActivity">
+
+   <EditText
+       android:id="@+id/et_name_field"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/layout_quantity"
+        android:padding="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/et_name_field"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:textColor="@color/cardview_light_background"
+            android:background="@drawable/btn_bg"
+            android:layout_below="@+id/et_name_field"
+            android:id="@+id/btn_decrease"
+            android:layout_width="50dp"
+            android:textSize="24sp"
+            android:layout_height="50dp"
+            android:text="-" />
+
+        <TextView
+            android:padding="2dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:textSize="24sp"
+            android:id="@+id/tv_quantity"
+            android:textColor="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0" />
+
+        <Button
+            android:textColor="@color/cardview_light_background"
+            android:background="@drawable/btn_bg"
+            android:layout_marginRight="4dp"
+            android:id="@+id/btn_increase"
+            android:textSize="24sp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="+" />
+
+        <Button
+            android:layout_marginLeft="24dp"
+            android:textColor="@color/cardview_light_background"
+            android:background="@color/colorPrimaryDark"
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="4dp"
+        android:id="@+id/recyclerview"
+        android:layout_below="@+id/layout_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>
